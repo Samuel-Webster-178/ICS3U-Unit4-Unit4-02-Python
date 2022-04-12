@@ -16,9 +16,14 @@ def main():
     # process & output
     try:
         int_integer = int(string_integer)
-        while i <= int_integer:
-            answer *= i
-            i += 1
+        if int_integer == 0:
+            answer = 1
+        elif int_integer < 0:
+            answer = "undefined"
+        else:
+            while i <= int_integer:
+                answer *= i
+                i += 1
         print("{0}! = {1}".format(int_integer, answer))
     except Exception:
         print("Invalid Input")
